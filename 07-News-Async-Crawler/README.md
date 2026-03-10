@@ -121,30 +121,12 @@ ollama pull qwen3:4b
 
 ## Usage
 
-### Full pipeline (Jupyter Notebook)
-
-Open `Projet_Newsletter.ipynb` and run cells sequentially.
-
-### Step by step (scripts)
-
+1. Run the extraction script from the terminal:
 ```bash
-# Step I — Extract articles
-python -u extract_all_sites.py
-
-# Step II.1 — LLM scoring
-python -u score_step1_llm.py
-
-# Step II.2 — Web search resonance
-python -u score_step2_web_resonance.py
-
-# Step III — Train LDA and predict
-python -u step3_lda.py
+   python -u extract_all_sites.py
 ```
-
-### Newsletter generation
-
-The last cell of the notebook generates a complete newsletter in French using the top 10 articles enriched with web context.
-
+2. Open `Projet_Newsletter.ipynb` in JupyterLab
+3. Run all cells sequentially — scoring, LDA, word cloud, and newsletter generation are all inside the notebook
 ## Project Structure
 
 ```
